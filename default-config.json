@@ -1,0 +1,9 @@
+{
+    "discord": {
+        "token": "Token of bot.",
+        "clientID": "Client ID of bot."
+    },
+    "api": {
+        "hypixelAPIkey": "Hypixel api key."
+    }
+}

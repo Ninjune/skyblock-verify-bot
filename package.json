@@ -1,0 +1,29 @@
+{
+  "name": "skyblock-verify-bot",
+  "version": "0.1",
+  "description": "Verify discord bot for skyblock.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ninjune/coleweight-recreation.git"
+  },
+  "keywords": [
+    "skyblock",
+    "bot"
+  ],
+  "author": "Ninjune",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ninjune/coleweight-recreation/issues"
+  },
+  "homepage": "https://github.com/Ninjune/coleweight-recreation#readme",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "discord.js": "^14.3.0",
+    "express": "^4.18.2",
+    "json": "^11.0.0"
+  }
+}
