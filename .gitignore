@@ -1,6 +1,5 @@
 data/
 .env
-src/web/site/
 config.json
 .vscode
 node_modules/
