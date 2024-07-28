@@ -19,7 +19,7 @@ async function verify(guild, ign, discordMember)
     if(hypixelResponse.code != undefined)
         return { code: hypixelResponse.code, message: "Unable to fetch Hypixel data associated with IGN."}
 
-    const linkedDiscord = hypixelResponse.player.socialMedia.links.DISCORD
+    const linkedDiscord = hypixelResponse.player?.socialMedia?.links?.DISCORD
 
     if(linkedDiscord !== discordUsername)
         return {code: 400, message: "IGN is not linked to Discord user."}
