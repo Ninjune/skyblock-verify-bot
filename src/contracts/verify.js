@@ -20,16 +20,15 @@ async function verify(guild, ign, discordMember)
         return { code: hypixelResponse.code, message: "Unable to fetch Hypixel data associated with IGN."}
 
     const linkedDiscord = hypixelResponse.player.socialMedia.links.DISCORD
-
     if(linkedDiscord !== discordUsername)
         return {code: 400, message: "IGN is not linked to Discord user."}
 
     if(verifyRolesMap.get(guild.id) == undefined)
         return {code: 400, message: "Verified role is not setup. Admin should setup with /setverifyrole." }
     const verifyRole = guild.roles.cache.get(verifyRolesMap.get(guild.id));
-    discordMember.roles.add(verifyRole)
-    discordMember.setNickname(mojangResponse.username)
+    discordMember.roles.add(verifyRole).then((member) => member.setNickname(mojangResponse.username))
     return { code: 200 }
+    
 }
 
 module.exports = {verify}
