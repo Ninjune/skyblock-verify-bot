@@ -28,7 +28,6 @@ async function verify(guild, ign, discordMember)
     const verifyRole = guild.roles.cache.get(verifyRolesMap.get(guild.id));
     discordMember.roles.add(verifyRole).then((member) => member.setNickname(mojangResponse.username))
     return { code: 200 }
-    
 }
 
 module.exports = {verify}
