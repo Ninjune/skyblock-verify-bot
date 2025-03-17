@@ -27,9 +27,7 @@ async function verify(guild, ign, discordMember)
     if(verifyRolesMap.get(guild.id) == undefined)
         return {code: 400, message: "Verified role is not setup. Admin should setup with /setverifyrole." }
     const verifyRole = guild.roles.cache.get(verifyRolesMap.get(guild.id));
-    
-    discordMember.roles.add(verifyRole)
-    discordMember.setNickname(mojangResponse.username)
+    discordMember.roles.add(verifyRole).then((member) => member.setNickname(mojangResponse.username))
     return { code: 200 }
 }
 
