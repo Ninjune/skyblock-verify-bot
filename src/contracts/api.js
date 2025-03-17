@@ -93,6 +93,7 @@ async function reqHypixelApi(sublink, key)
             char = "?"
 
         hypixelData = (await axios.get("https://api.hypixel.net" + sublink + char + "key=" + key)).data
+        logToFile("Successfully requested hypixel api with sublink: " + sublink);
         return hypixelData
     }
     catch(err)
