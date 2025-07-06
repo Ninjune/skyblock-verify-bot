@@ -37,40 +37,7 @@ async function reqMojangApis(name) {
 
 async function getMojangData(name)
 {
-    /*let nameDBRows = fs.readFileSync("./csvs/nameDB.csv", "utf8").split("\r\n"),
-     mojangData = {}
-
-    for(let i = 0; i < nameDBRows.length; i++)
-    {
-        if(nameDBRows[i] == undefined || nameDBRows[i] == "") continue
-        let row = nameDBRows[i].split(" ")
-
-        if (row[0].toLowerCase() == name.toLowerCase() || row[1].toLowerCase() == name.toLowerCase())
-        {
-            if(row[2] == undefined || row[2] < Date.now() - 86400000) // 1 day
-                nameDBRows.splice(i, 1)
-            else if (mojangData.username == undefined)
-            {
-                mojangData.username = row[0]
-                mojangData.uuid = row[1]
-            }
-            else
-                nameDBRows.splice(i, 1)
-        }
-    }*/
-
-    /*if(mojangData.username == undefined)
-    {*/
-        let mojangData = await reqMojangApis(name)
-        /*if(mojangData.error)
-        {
-            return mojangData
-        }
-        let writeData = mojangData.username + " " + mojangData.uuid + " " + Date.now()
-        nameDBRows.push(writeData)
-    }
-    fs.writeFileSync("./csvs/nameDB.csv", nameDBRows.join("\r\n"))*/
-    return mojangData
+    return await reqMojangApis(name)
 }
 
 /**
