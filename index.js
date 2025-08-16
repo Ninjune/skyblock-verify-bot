@@ -6,6 +6,6 @@ Written by DuckySoLucky or Senither on ?/?/??
 process.on("uncaughtException", function (error) {console.log(error)})
 const app = require("./src/Application")
 
-process.title = "Skyblock Verify Bot | by Ninjune (template by DuckySoLucky/Senither)"
+process.title = "Skyblock Verify Bot"
 
 app.startDiscord()

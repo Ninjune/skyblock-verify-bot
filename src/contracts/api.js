@@ -80,7 +80,7 @@ async function reqHypixelApi(sublink, key)
 function catchError(error)
 {
     if(error == undefined)
-        return logToFile("Undefined error line 116 api.js")
+        return logToFile("Undefined error passed to catchError!")
     logToFile(error.stack)
     if(error.response)
     {

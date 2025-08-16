@@ -1,8 +1,6 @@
 const { EmbedBuilder } = require("discord.js")
 
 
-
-
 /**
  * Responds to an interaction.
  * @param {BaseInteraction} interaction 

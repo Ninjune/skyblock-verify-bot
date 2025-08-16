@@ -41,8 +41,6 @@ class DiscordManager {
             else {client.on(event.name, (...args) => event.execute(...args))}
         }
 
-        //global.guild = await client.guilds.fetch(config.discord.serverID)
-
         process.on("SIGINT", () => { process.exit() })
     }
 }
